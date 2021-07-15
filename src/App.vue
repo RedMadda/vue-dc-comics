@@ -21,8 +21,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import "style/commons.scss";
+<style lang="scss">
+@import '@/style/commons.scss';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

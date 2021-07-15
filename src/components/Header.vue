@@ -1,16 +1,22 @@
 <template>
-  <header class="container">
-    <a href="#"><img src="../assets/dc-logo.png" alt="Logo DC" /></a>
-    <ul>
-      <li
-        v-for="(link, index) in Links"
-        :key="index"
-        :class="{ active: link.activated }"
-      >
+  <header>
+    <!-- nav -->
+    <div class="container">
+      <a href="#"><img src="../assets/dc-logo.png" alt="Logo DC" /></a>
+      <ul>
+        <li
+          v-for="(link, index) in Links"
+          :key="index"
+          :class="{ active: link.activated }">
         <a href="#">{{ link.text }}</a>
-      </li>
-    </ul>
-   </header>
+        </li>
+      </ul>
+    </div>
+    <!-- jumbo -->
+    <div class="jumbo">
+      <img :src="require('../assets/jumbotron.jpg')" alt="jumbo bkc">
+    </div>
+  </header>
 </template>
 
 <script>
@@ -28,16 +34,20 @@ export default {
 
 @import "../style/var.scss";
 
-header {
+.container {
+  height: 80px;
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
+  align-items: center;
+  
   img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
   ul {
     display: flex;
+    height: 100%;
+    line-height: 60px;
 
     li {
       list-style-type: none;
@@ -56,6 +66,16 @@ header {
         color: #353535;
       }
     }
+  }
+}
+
+.jumbo{
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  
+  img{
+    width: inherit;
   }
 }
 </style>
