@@ -1,0 +1,13 @@
+@mixin btn($pad, $bord, $text-col:white, $bck:#01407C ){
+    padding: $pad;
+    background-color: $bck;
+    border: $bord;
+    color: $text-col;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

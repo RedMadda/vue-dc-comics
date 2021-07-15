@@ -19,9 +19,14 @@ export default {
     
    .comic-card{
        width: calc(200% / 13);
+       margin-bottom: 50px;
        img{
            width:90%;
            margin:auto;
-    }
+        }
+        p{
+            text-transform: uppercase;
+            font-size: 12px;
+        }
    }
 </style>
